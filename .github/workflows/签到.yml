@@ -4,7 +4,7 @@ on:
   push:
     branches: [ master ]
   schedule:
-    - cron: 30 04,23 * * ?
+    - cron: 30 03,23 * * ?
   watch:
     types: started
     
@@ -44,7 +44,7 @@ jobs:
         - name: Run 号码2
           env:
            haoma: ${{ secrets.HAOMA2 }}
-           mm: ${{ secrets.MM }}
+           mm: ${{ secrets.MM2 }}
            appid: ${{ secrets.APPID }}
           run: |
            bash CnUnicom.sh
@@ -52,7 +52,7 @@ jobs:
         - name: Run 号码3
           env:
            haoma: ${{ secrets.HAOMA3 }}
-           mm: ${{ secrets.MM }}
+           mm: ${{ secrets.MM3 }}
            appid: ${{ secrets.APPID }}
           run: |
            bash CnUnicom.sh
@@ -60,7 +60,7 @@ jobs:
         - name: Run 号码4
           env:
            haoma: ${{ secrets.HAOMA4 }}
-           mm: ${{ secrets.MM }}
+           mm: ${{ secrets.MM4 }}
            appid: ${{ secrets.APPID }}
           run: |
            bash CnUnicom.sh
@@ -68,7 +68,7 @@ jobs:
         - name: Run 号码5
           env:
            haoma: ${{ secrets.HAOMA5 }}
-           mm: ${{ secrets.MM }}
+           mm: ${{ secrets.MM5 }}
            appid: ${{ secrets.APPID }}
           run: |
            bash CnUnicom.sh
@@ -76,7 +76,7 @@ jobs:
         - name: Run 号码6
           env:
            haoma: ${{ secrets.HAOMA6 }}
-           mm: ${{ secrets.MM }}
+           mm: ${{ secrets.MM6 }}
            appid: ${{ secrets.APPID }}
           run: |
            bash CnUnicom.sh
@@ -84,7 +84,15 @@ jobs:
         - name: Run 号码7
           env:
            haoma: ${{ secrets.HAOMA7 }}
-           mm: ${{ secrets.MM2 }}
+           mm: ${{ secrets.MM7 }}
+           appid: ${{ secrets.APPID }}
+          run: |
+           bash CnUnicom.sh
+
+        - name: Run 号码8
+          env:
+           haoma: ${{ secrets.HAOMA8 }}
+           mm: ${{ secrets.MM8 }}
            appid: ${{ secrets.APPID }}
           run: |
            bash CnUnicom.sh
